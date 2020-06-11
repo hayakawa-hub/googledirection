@@ -1,0 +1,18 @@
+<table>
+    <tr>
+    <th>インデックス番号</th><th>出発場所</th><th>目的地</th><th>移動方法</th>
+    
+    </tr>
+    <%@route.each do |route|%>
+    <tr>
+        <td><%=route.id%></td>
+        <td><%=route.depature_place%></td>
+        <td><%=route.destination_place%></td>
+        <td><%=route.transition_method%></td>
+        <td><%=link_to 'show', route_path(route)%></td>
+        <td><%= link_to 'Destroy' , route_path(route.id) , method: :delete,data: {confirm: 'Are you sure?' } %></td>
+    </tr>
+    <%end%>
+</table>
+
+<%= link_to 'プランを作る', 'route/new'%>

@@ -1,0 +1,20 @@
+<%= form_for(@route, url:{controller:'route',action:'create'}) do |form|%>
+    <div>
+    <label for='depature_place'>出発地</label>
+    <%=form.text_field:depature_place%>
+
+    </div>
+    <label for='destination_place'>目的地</label>
+    <%=form.text_field:destination_place%>
+
+    <div>
+    <label for='transition_method'>移動方法</label>
+    <%=form.select:transition_method,[["車","DRIVING"],["徒歩","WALKING"]]%>
+
+    </div>
+
+<%=form.submit%>
+
+<%end%>
+
+<%= link_to '一覧に戻る', '/route'%>

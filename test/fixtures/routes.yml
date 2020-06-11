@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  depature_place: MyString
+  destination_place: MyString
+  transition_method: MyString
+
+two:
+  depature_place: MyString
+  destination_place: MyString
+  transition_method: MyString
